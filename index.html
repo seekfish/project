@@ -3,12 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
 </head>
 <body>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
+	<script src="lib/requirejs/require.js" data-main="js/index"></script>
+	<header></header>
+	<div class="mian">
+		<h1>商品</h1>
+		<div class="list"></div>
+		<script type="text/html" class="list_temp">
+			{{each list as prd }}
+				<div class=" prod">
+					<div class="id">{{prd.id}}</div>
+					<div class="title">{{prd.title}}</div>
+					<div class="price">{{prd.price}}</div>
+					<div class="img">{{prd.img}}</div>
+				</div>
+
+			{{/each}}
+		</script>
+	</div>
+	<footer></footer>
 </body>
 </html>
